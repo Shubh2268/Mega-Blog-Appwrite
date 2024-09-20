@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <h1>A blog app in appwrite</h1>
+      <h1>A blog app in appwrite with Shubh</h1>
     </>
   )
 }
