@@ -29,9 +29,27 @@ export class Service{
                 }
             )
         } catch (error) {
-            console.log("Appwrite serive :: createPost :: error", error);  
+            console.log("Appwrite service :: createPost :: error", error);  
         }
-    }
+    };
+
+    async updatePost(slug, {title, content, featuredImage, status}) {
+        try {
+            return await this.databases.updateDocument(
+                conf.appwriteDatabaseId,
+                conf.appwriteCollectionId,
+                slug,
+                {
+                    title,
+                    content,
+                    featuredImage,
+                    status 
+                }
+            )
+        } catch (error) {
+            console.log("Appwrite service :: updatePost :: error", error); 
+        }
+    };
 }
 
 const service = new Service()
