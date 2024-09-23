@@ -63,7 +63,20 @@ export class Service{
             console.log("Appwrite service :: deletePost :: error", error); 
             return false;
         }
-    }
+    };
+
+    async getPost(slug) {
+        try {
+            return await this.databases.getDocument(
+                conf.appwriteDatabaseId,
+                conf.appwriteDatabaseId,
+                slug
+            )
+        } catch (error) {
+            console.log("Appwrite service :: getPost :: error", error);
+            return false; 
+        }
+    };
 }
 
 const service = new Service()
