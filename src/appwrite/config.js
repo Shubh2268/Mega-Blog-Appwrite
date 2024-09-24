@@ -119,6 +119,13 @@ export class Service{
         }
     };
 
+    getFilePreview(fileId) {
+        return this.bucket.getFilePreview(
+            conf.appwriteBucketId,
+            fileId
+        )
+    };
+
 };
 
 const service = new Service()
