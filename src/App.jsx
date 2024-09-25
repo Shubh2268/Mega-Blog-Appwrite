@@ -21,11 +21,11 @@ function App() {
     .finally(() => setLoading(false))
   }, []);
 
-  return (
-    <>
-      <h1>A blog app in appwrite with Shubh</h1>
-    </>
-  )
+  return !loading ? (
+    <div>
+      
+    </div>
+  ) : null;
 }
 
 export default App
