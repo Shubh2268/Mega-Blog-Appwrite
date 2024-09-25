@@ -3,6 +3,7 @@ import './App.css'
 import { useDispatch } from 'react-redux';
 import authService from './appwrite/auth';
 import {login, logout} from './store/authSlice';
+import { Footer, Header } from './components'
 
 function App() {
 
@@ -22,8 +23,11 @@ function App() {
   }, []);
 
   return !loading ? (
-    <div>
-      
+    <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
+        <div className='w-full block'>
+          <Header />
+          <Footer />
+        </div>
     </div>
   ) : null;
 }
