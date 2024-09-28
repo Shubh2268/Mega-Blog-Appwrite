@@ -5,9 +5,9 @@ const Select = ({ options, label,className, ...props }, ref) => {
     const id = useId();
 
   return (
-    <div>
-      Select
-    </div>
+   <div className='w-full'>
+    {label && <label htmlFor={id} className=''></label>}
+   </div>
   )
 }
 
