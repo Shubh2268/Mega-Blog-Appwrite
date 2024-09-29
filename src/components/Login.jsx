@@ -8,6 +8,12 @@ import { useForm } from 'react-hook-form';
 
 
 const Login = () => {
+
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const [register, handleSubmit] = useForm();
+    const [error, setError] = useState('');
+
   return (
     <div>
       Login
