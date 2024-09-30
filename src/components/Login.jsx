@@ -14,6 +14,20 @@ const Login = () => {
     const [register, handleSubmit] = useForm();
     const [error, setError] = useState('');
 
+    const login = async(data) => {
+      setError('')
+      try {
+        const session = await authService.login(data);
+        if(session) {
+          const userData = authService.getCurrentUser();
+          if(userData) dispatch(authLogin(userData));
+          navigate('/');
+        }
+      } catch (error) {
+        setError(error.message)
+      }
+    };
+
   return (
     <div>
       Login
