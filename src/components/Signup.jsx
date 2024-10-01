@@ -40,6 +40,19 @@ const Signup = () => {
           Already have an account?&nbsp;
           <Link to='/login' className='font-medium text-primary transition-all duration-200 hover:underline'>Sign In</Link>
         </p>
+
+        {error && <p className='text-red-600 mt-8 text-center'>{error}</p>}
+
+        <form onSubmit={handleSubmit(create)}>
+          <div className='space-y-5'>
+            <Input label='Full Name: ' placeholder='Enter your full name'
+              {...register("name", {
+                required: true,
+              })}
+            />
+          </div>
+        </form>
+
       </div>
     </div>
   )
