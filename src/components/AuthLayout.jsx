@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
-const AuthLayout = () => {
+export default Protected = ({ children, authentication= true }) => {
   return (
     <div>
       AuthLayout
@@ -8,4 +10,3 @@ const AuthLayout = () => {
   )
 }
 
-export default AuthLayout
