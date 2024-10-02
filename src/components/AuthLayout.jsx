@@ -13,17 +13,17 @@ export default Protected = ({ children, authentication = true }) => {
     //TODO: make it more easy to understand
 
     // if (authStatus ===true){
-    //     navigate("/")
+    //     navigate('/')
     // } else if (authStatus === false) {
-    //     navigate("/login")
+    //     navigate('/login')
     // }
 
     //let authValue = authStatus === true ? true : false
 
     if (authentication && authStatus !== authentication) {
-      navigate("/login")
+      navigate('/login')
     } else if (!authentication && authStatus !== authentication) {
-      navigate("/")
+      navigate('/')
     }
     setLoader(false);
   }, [authStatus, navigate, authentication]);
