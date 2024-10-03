@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { Container, PostForm } from '../components';
+import appwriteService from '../appwrite/config'
 
 const AllPosts = () => {
+
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {}, []);
+
   return (
     <div>
       
@@ -8,4 +15,4 @@ const AllPosts = () => {
   )
 }
 
-export default AllPosts
+export default AllPosts;

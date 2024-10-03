@@ -8,6 +8,7 @@ import Select from "./Select";
 import Signup from "./Signup";
 import Login from "./Login";
 import PostForm from "./post-form/PostForm";
+import PostCard from "./PostCard";
 
 
 export {
@@ -20,5 +21,6 @@ export {
     Select,
     Signup,
     Login,
-    PostForm
+    PostForm,
+    PostCard
 };
