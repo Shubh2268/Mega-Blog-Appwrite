@@ -5,6 +5,8 @@ import Logo from './Logo';
 import LogoutBtn from './Header/LogoutBtn';
 import RTE from "./RTE";
 import Select from "./Select";
+import Signup from "./Signup";
+
 
 export {
     Header,
@@ -13,5 +15,6 @@ export {
     Logo,
     LogoutBtn,
     RTE,
-    Select
+    Select,
+    Signup,
 };
