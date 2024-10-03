@@ -6,6 +6,8 @@ import LogoutBtn from './Header/LogoutBtn';
 import RTE from "./RTE";
 import Select from "./Select";
 import Signup from "./Signup";
+import Login from "./Login";
+import PostForm from "./post-form/PostForm";
 
 
 export {
@@ -17,4 +19,6 @@ export {
     RTE,
     Select,
     Signup,
+    Login,
+    PostForm
 };
