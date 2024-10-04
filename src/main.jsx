@@ -9,25 +9,25 @@ import Home from './pages/Home.jsx'
 import { AuthLayout, Login } from './components/index.js'
 
 
-import AddPost from "./pages/AddPost";
+import AddPost from './pages/AddPost';
 import Signup from './pages/Signup'
-import EditPost from "./pages/EditPost";
+import EditPost from './pages/EditPost';
 
-import Post from './pages/post.jsx'
+import Post from './pages/post.jsx';
 
-import AllPosts from "./pages/AllPosts";
+import AllPosts from './pages/AllPosts';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <App />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <Home />,
       },
       {
-        path: "/login",
+        path: '/login',
         element: (
           <AuthLayout authentication={false}>
             <Login />
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/signup",
+        path: '/signup',
         element: (
           <AuthLayout authentication={false}>
             <Signup />
@@ -43,34 +43,34 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/all-posts",
+        path: '/all-posts',
         element: (
           <AuthLayout authentication>
-            {" "}
+            {' '}
             <AllPosts />
           </AuthLayout>
         ),
       },
       {
-        path: "/add-post",
+        path: '/add-post',
         element: (
           <AuthLayout authentication>
-            {" "}
+            {' '}
             <AddPost />
           </AuthLayout>
         ),
       },
       {
-        path: "/edit-post/:slug",
+        path: '/edit-post/:slug',
         element: (
           <AuthLayout authentication>
-            {" "}
+            {' '}
             <EditPost />
           </AuthLayout>
         ),
       },
       {
-        path: "/post/:slug",
+        path: '/post/:slug',
         element: <Post />,
       },
     ],
