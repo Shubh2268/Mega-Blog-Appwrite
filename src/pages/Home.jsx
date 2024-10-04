@@ -1,4 +1,6 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react';
+import appwriteService from "../appwrite/config";
+import {Container, PostCard} from '../components';
 
 const Home = () => {
   return (
@@ -8,4 +10,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;
